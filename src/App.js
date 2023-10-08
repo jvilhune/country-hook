@@ -99,7 +99,9 @@ const App = () => {
     <div>
 
       <form onSubmit={fetch}>
-        Country (for example Finland) : <input {...nameInput} />
+        <div> Country : </div>
+        <div>(for example United States, United Kingdom, Finland)</div>
+        <input {...nameInput} />
         <button>find</button>
       </form>
 
