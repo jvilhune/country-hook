@@ -64,12 +64,21 @@ const Country = ({ country }) => {
     console.log('country.capital', country.capital)
     console.log('country.region', country.region)
 
+    /* https://flagcdn.com/w320/fi.png */
+    /* country.flag -> flag as text information is displayed */
+    /* country.flags.png -> flag as photo is displayed */
+    /* country.flags.alt -> description info from flag is displayed */
+
     component = (
       <div>
         <h3>{country.name.common} </h3>
-        <div>capital {country.capital} </div>
-        <div>population {country.population}</div>
-        <img src={country.flag} height='100' alt={`flag of ${country.name.common}`}/> 
+        <div>fifa : {country.fifa} </div>
+        <div>capital : {country.capital} </div>
+        <div>population : {country.population}</div>
+        <div>region : {country.region}</div>
+        <div>timezones : {country.timezones}</div>
+        <div>flag info : {country.flags.alt}</div>
+        <img src={country.flags.png} width = '100' height='70' alt={`flag of ${country.name.common}`}/> 
       </div>
     )
   }
@@ -90,7 +99,7 @@ const App = () => {
     <div>
 
       <form onSubmit={fetch}>
-        <input {...nameInput} />
+        Country (for example Finland) : <input {...nameInput} />
         <button>find</button>
       </form>
 
